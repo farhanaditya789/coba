@@ -1,0 +1,11 @@
+#query tambahan untuk sql
+
+DELETE FROM users;
+
+ALTER TABLE users ADD is_active INT(1) NOT NULL DEFAULT '0' AFTER phone;
+
+ALTER TABLE users AUTO_INCREMENT=1;
+
+INSERT INTO users(roles_id, name, email, password, address, phone, is_active) VALUES (1, 'Super Admin User', 'super@email.com', '$2y$10$J6.rumLtmJ0RWZrj4HEmsut0340NfxNqpNVyZPeu2cIDatKzd7j9y', 'Jalan - Jalan', '06969696969', 1);
+INSERT INTO users(roles_id, name, email, password, address, phone, is_active) VALUES (2, 'Admin User', 'admin@email.com', '$2y$10$4nDm7sFN0D2/qhwHPSPWhOClf8FiRPhgg9skkp25Did2NJMNx94sC', 'Jalan - Jalan', '06969696969', 1);
+INSERT INTO users(roles_id, name, email, password, address, phone, is_active) VALUES (3, 'Employee User', 'employee@email.com', '$2y$10$Bx2zMRwFCi7Pconcc6sYg.VrtXfBa.ZQM34RjOuMbscpFShsZbrzS', 'Jalan - Jalan', '06969696969', 1);
